@@ -1,0 +1,589 @@
+var wms_layers = [];
+
+
+        var lyr_OpenStreetMap_0 = new ol.layer.Tile({
+            'title': 'OpenStreetMap',
+            //'type': 'base',
+            'opacity': 1.000000,
+            
+            
+            source: new ol.source.XYZ({
+    attributions: ' ',
+                url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+            })
+        });
+var format_ADMINISTRASI_1 = new ol.format.GeoJSON();
+var features_ADMINISTRASI_1 = format_ADMINISTRASI_1.readFeatures(json_ADMINISTRASI_1, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_ADMINISTRASI_1 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_ADMINISTRASI_1.addFeatures(features_ADMINISTRASI_1);
+var lyr_ADMINISTRASI_1 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_ADMINISTRASI_1, 
+                style: style_ADMINISTRASI_1,
+                popuplayertitle: "ADMINISTRASI",
+                interactive: true,
+    title: 'ADMINISTRASI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_0.png" /> BAMBE<br />\
+    <img src="styles/legend/ADMINISTRASI_1_1.png" /> BENOWO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_2.png" /> BERBEK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_3.png" /> BUNGURASIH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_4.png" /> GADUNG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_5.png" /> GEMPOLKURUNG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_6.png" /> GENTING<br />\
+    <img src="styles/legend/ADMINISTRASI_1_7.png" /> JANTI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_8.png" /> JONO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_9.png" /> KEDANYANG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_10.png" /> KEDUNGCOWEK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_11.png" /> KEDUNGREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_12.png" /> KEL. AIRLANGGA<br />\
+    <img src="styles/legend/ADMINISTRASI_1_13.png" /> KEL. ALUN-ALUNCONTONG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_14.png" /> KEL. AMPEL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_15.png" /> KEL. ASEMROWO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_16.png" /> KEL. BABATAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_17.png" /> KEL. BABATJERAWAT<br />\
+    <img src="styles/legend/ADMINISTRASI_1_18.png" /> KEL. BALASKLUMPRIK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_19.png" /> KEL. BALONGSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_20.png" /> KEL. BANGKINGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_21.png" /> KEL. BANJARSUGIHAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_22.png" /> KEL. BANYUURIP<br />\
+    <img src="styles/legend/ADMINISTRASI_1_23.png" /> KEL. BARATAJAYA<br />\
+    <img src="styles/legend/ADMINISTRASI_1_24.png" /> KEL. BEBEKAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_25.png" /> KEL. BENDULMERISI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_26.png" /> KEL. BIBIS<br />\
+    <img src="styles/legend/ADMINISTRASI_1_27.png" /> KEL. BONGKARAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_28.png" /> KEL. BRINGIN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_29.png" /> KEL. BUBUTAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_30.png" /> KEL. BULAK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_31.png" /> KEL. BULAKBANTENG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_32.png" /> KEL. BUNTARAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_33.png" /> KEL. DARMO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_34.png" /> KEL. DR.SUTOMO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_35.png" /> KEL. DUKUHKUPANG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_36.png" /> KEL. DUKUHMENANGGAL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_37.png" /> KEL. DUKUHPAKIS<br />\
+    <img src="styles/legend/ADMINISTRASI_1_38.png" /> KEL. DUKUHSUTOREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_39.png" /> KEL. DUPAK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_40.png" /> KEL. EMBONGKALIASIN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_41.png" /> KEL. GADEL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_42.png" /> KEL. GADING<br />\
+    <img src="styles/legend/ADMINISTRASI_1_43.png" /> KEL. GAYUNGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_44.png" /> KEL. GEBANGPUTIH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_45.png" /> KEL. GEDANGASIN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_46.png" /> KEL. GENTENG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_47.png" /> KEL. GENTING<br />\
+    <img src="styles/legend/ADMINISTRASI_1_48.png" /> KEL. GREGES<br />\
+    <img src="styles/legend/ADMINISTRASI_1_49.png" /> KEL. GUBENG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_50.png" /> KEL. GULOMANTUNG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_51.png" /> KEL. GUNDIH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_52.png" /> KEL. GUNUNGANYAR<br />\
+    <img src="styles/legend/ADMINISTRASI_1_53.png" /> KEL. GUNUNGANYARTAMBAK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_54.png" /> KEL. GUNUNGSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_55.png" /> KEL. JAGIR<br />\
+    <img src="styles/legend/ADMINISTRASI_1_56.png" /> KEL. JAJARTUNGGAL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_57.png" /> KEL. JAMBANGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_58.png" /> KEL. JEMURWONOSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_59.png" /> KEL. JEPARA<br />\
+    <img src="styles/legend/ADMINISTRASI_1_60.png" /> KEL. JERUK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_61.png" /> KEL. KALIANAK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_62.png" /> KEL. KALIJUDAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_63.png" /> KEL. KALIRUNGKUT<br />\
+    <img src="styles/legend/ADMINISTRASI_1_64.png" /> KEL. KALISARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_65.png" /> KEL. KANDANGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_66.png" /> KEL. KAPASAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_67.png" /> KEL. KAPASARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_68.png" /> KEL. KARAH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_69.png" /> KEL. KARANGPILANG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_70.png" /> KEL. KARANGPOH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_71.png" /> KEL. KEBONSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_72.png" /> KEL. KEBRAON<br />\
+    <img src="styles/legend/ADMINISTRASI_1_73.png" /> KEL. KEDUNGBARUK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_74.png" /> KEL. KEDUNGDORO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_75.png" /> KEL. KEDURUS<br />\
+    <img src="styles/legend/ADMINISTRASI_1_76.png" /> KEL. KEJAWANPUTIHTAMBAK<br />\
+    <img src="styles/legend/ADMINISTRASI_1_77.png" /> KEL. KEMAYORAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_78.png" /> KEL. KENDANGSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_79.png" /> KEL. KENJERAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_80.png" /> KEL. KEPUTIH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_81.png" /> KEL. KEPUTRAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_82.png" /> KEL. KERTAJAYA<br />\
+    <img src="styles/legend/ADMINISTRASI_1_83.png" /> KEL. KETABANG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_84.png" /> KEL. KETINTANG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_85.png" /> KEL. KLAKAHREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_86.png" /> KEL. KLAMPISNGASEM<br />\
+    <img src="styles/legend/ADMINISTRASI_1_87.png" /> KEL. KOMPLEKKENJERAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_88.png" /> KEL. KREMBANGAN SELATAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_89.png" /> KEL. KREMBANGAN UTARA<br />\
+    <img src="styles/legend/ADMINISTRASI_1_90.png" /> KEL. KUPANGKRAJAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_91.png" /> KEL. KUTISARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_92.png" /> KEL. LAKARSANTRI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_93.png" /> KEL. LIDAH KULON<br />\
+    <img src="styles/legend/ADMINISTRASI_1_94.png" /> KEL. LIDAHWETAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_95.png" /> KEL. LONTAR<br />\
+    <img src="styles/legend/ADMINISTRASI_1_96.png" /> KEL. MADE<br />\
+    <img src="styles/legend/ADMINISTRASI_1_97.png" /> KEL. MANUKAN KULON<br />\
+    <img src="styles/legend/ADMINISTRASI_1_98.png" /> KEL. MANUKAN WETAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_99.png" /> KEL. MARGOREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_100.png" /> KEL. MAYARSABRANGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_101.png" /> KEL. MEDOKAN SEMAMPIR<br />\
+    <img src="styles/legend/ADMINISTRASI_1_102.png" /> KEL. MEDOKANAYU<br />\
+    <img src="styles/legend/ADMINISTRASI_1_103.png" /> KEL. MENANGGAL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_104.png" /> KEL. MENURPUMPUNGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_105.png" /> KEL. MOJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_106.png" /> KEL. MOROKREMBANGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_107.png" /> KEL. MULYOREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_108.png" /> KEL. NGAGEL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_109.png" /> KEL. NGAGELREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_110.png" /> KEL. NYAMPLUNGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_111.png" /> KEL. NYINDENJANGKUNGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_112.png" /> KEL. PACARKELING<br />\
+    <img src="styles/legend/ADMINISTRASI_1_113.png" /> KEL. PACARKEMBANG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_114.png" /> KEL. PAGESANGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_115.png" /> KEL. PAKIS<br />\
+    <img src="styles/legend/ADMINISTRASI_1_116.png" /> KEL. PANJANGJIWO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_117.png" /> KEL. PEGIRIAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_118.png" /> KEL. PENELEH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_119.png" /> KEL. PENJARINGANSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_120.png" /> KEL. PERAK BARAT<br />\
+    <img src="styles/legend/ADMINISTRASI_1_121.png" /> KEL. PERAK TIMUR<br />\
+    <img src="styles/legend/ADMINISTRASI_1_122.png" /> KEL. PERAK UTARA<br />\
+    <img src="styles/legend/ADMINISTRASI_1_123.png" /> KEL. PETEMON<br />\
+    <img src="styles/legend/ADMINISTRASI_1_124.png" /> KEL. PLOSO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_125.png" /> KEL. PRADAHKALIKENDAL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_126.png" /> KEL. PRAPEN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_127.png" /> KEL. PUCANGSEWU<br />\
+    <img src="styles/legend/ADMINISTRASI_1_128.png" /> KEL. PUTATGEDE<br />\
+    <img src="styles/legend/ADMINISTRASI_1_129.png" /> KEL. PUTATJAYA<br />\
+    <img src="styles/legend/ADMINISTRASI_1_130.png" /> KEL. RANGKAH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_131.png" /> KEL. ROMOKALISARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_132.png" /> KEL. RUNGKUT KIDUL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_133.png" /> KEL. RUNGKUT TENGAH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_134.png" /> KEL. RUNGKUTMENANGGAL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_135.png" /> KEL. SAMBIKEREP<br />\
+    <img src="styles/legend/ADMINISTRASI_1_136.png" /> KEL. SAWAHAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_137.png" /> KEL. SAWUNGGALING<br />\
+    <img src="styles/legend/ADMINISTRASI_1_138.png" /> KEL. SEMEMI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_139.png" /> KEL. SEMOLOWARU<br />\
+    <img src="styles/legend/ADMINISTRASI_1_140.png" /> KEL. SEPANJANG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_141.png" /> KEL. SIDODADI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_142.png" /> KEL. SIDOSERMO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_143.png" /> KEL. SIDOTOPO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_144.png" /> KEL. SIDOTOPO WETAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_145.png" /> KEL. SIMOKERTO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_146.png" /> KEL. SIMOLAWANG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_147.png" /> KEL. SIMOMULYO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_148.png" /> KEL. SIWALANKERTO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_149.png" /> KEL. SONOKWIJENAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_150.png" /> KEL. SUKOLILO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_151.png" /> KEL. SUKOMANUNGGAL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_152.png" /> KEL. SUMURWELUT<br />\
+    <img src="styles/legend/ADMINISTRASI_1_153.png" /> KEL. TAMBAKLANGON<br />\
+    <img src="styles/legend/ADMINISTRASI_1_154.png" /> KEL. TAMBAKOSOWILANGON<br />\
+    <img src="styles/legend/ADMINISTRASI_1_155.png" /> KEL. TAMBAKREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_156.png" /> KEL. TAMBAKSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_157.png" /> KEL. TAMBAKWEDI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_158.png" /> KEL. TANAHKALIKEDINDING<br />\
+    <img src="styles/legend/ADMINISTRASI_1_159.png" /> KEL. TANDES KIDUL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_160.png" /> KEL. TANDES LOR<br />\
+    <img src="styles/legend/ADMINISTRASI_1_161.png" /> KEL. TANJUNGSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_162.png" /> KEL. TEGALSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_163.png" /> KEL. TEMBOKDUKUH<br />\
+    <img src="styles/legend/ADMINISTRASI_1_164.png" /> KEL. TENGGILISMEJOYO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_165.png" /> KEL. TUBANAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_166.png" /> KEL. UJUNG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_167.png" /> KEL. WARUNGGUNUNG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_168.png" /> KEL. WIYUNG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_169.png" /> KEL. WONOCOLO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_170.png" /> KEL. WONOKROMO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_171.png" /> KEL. WONOKUSUMO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_172.png" /> KEL. WONOREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_173.png" /> KEPATIHAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_174.png" /> KREMBANGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_175.png" /> LABAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_176.png" /> MULUNG<br />\
+    <img src="styles/legend/ADMINISTRASI_1_177.png" /> NGELOM<br />\
+    <img src="styles/legend/ADMINISTRASI_1_178.png" /> PAKAL<br />\
+    <img src="styles/legend/ADMINISTRASI_1_179.png" /> PENGALANGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_180.png" /> PENJARINGANSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_181.png" /> PERAK BARAT<br />\
+    <img src="styles/legend/ADMINISTRASI_1_182.png" /> PRAMBANGAN<br />\
+    <img src="styles/legend/ADMINISTRASI_1_183.png" /> RANDEGANSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_184.png" /> SEGOROMADU<br />\
+    <img src="styles/legend/ADMINISTRASI_1_185.png" /> SETRO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_186.png" /> SUKOREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_187.png" /> SUMBEREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_188.png" /> TAMBAKBERAS<br />\
+    <img src="styles/legend/ADMINISTRASI_1_189.png" /> TAMBAKDONO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_190.png" /> TAMBAKOSO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_191.png" /> TAMBAKREJO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_192.png" /> TAMBAKSUMUR<br />\
+    <img src="styles/legend/ADMINISTRASI_1_193.png" /> TAWANGSARI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_194.png" /> WADUNGASRI<br />\
+    <img src="styles/legend/ADMINISTRASI_1_195.png" /> WEDORO<br />\
+    <img src="styles/legend/ADMINISTRASI_1_196.png" /> <br />'
+        });
+var format_JALAN_2 = new ol.format.GeoJSON();
+var features_JALAN_2 = format_JALAN_2.readFeatures(json_JALAN_2, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_JALAN_2 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_JALAN_2.addFeatures(features_JALAN_2);
+var lyr_JALAN_2 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_JALAN_2, 
+                style: style_JALAN_2,
+                popuplayertitle: "JALAN",
+                interactive: true,
+    title: 'JALAN<br />\
+    <img src="styles/legend/JALAN_2_0.png" /> AIRLANGGA - GUBENG<br />\
+    <img src="styles/legend/JALAN_2_1.png" /> AIRLANGGA - KERTAJAYA<br />\
+    <img src="styles/legend/JALAN_2_2.png" /> AIRLANGGA - MOJO<br />\
+    <img src="styles/legend/JALAN_2_3.png" /> AMPEL - SIDOTOPO<br />\
+    <img src="styles/legend/JALAN_2_4.png" /> ASEMROWO - BUBUTAN<br />\
+    <img src="styles/legend/JALAN_2_5.png" /> ASEMROWO - GENTING<br />\
+    <img src="styles/legend/JALAN_2_6.png" /> ASEMROWO - KREMBANGAN<br />\
+    <img src="styles/legend/JALAN_2_7.png" /> ASEMROWO - SAWAHAN<br />\
+    <img src="styles/legend/JALAN_2_8.png" /> ASEMROWO - SUKOMANUNGGAL<br />\
+    <img src="styles/legend/JALAN_2_9.png" /> ASEMROWO - TANDES<br />\
+    <img src="styles/legend/JALAN_2_10.png" /> BABATAN - BALASKLUMPRIK<br />\
+    <img src="styles/legend/JALAN_2_11.png" /> BABATAN - WIYUNG<br />\
+    <img src="styles/legend/JALAN_2_12.png" /> BABATJERAWAT - SEMEMI<br />\
+    <img src="styles/legend/JALAN_2_13.png" /> BABATJERAWAT - TAMBAKOSOWILANGON<br />\
+    <img src="styles/legend/JALAN_2_14.png" /> BALONGSARI - GADEL<br />\
+    <img src="styles/legend/JALAN_2_15.png" /> BALONGSARI - KARANGPOH<br />\
+    <img src="styles/legend/JALAN_2_16.png" /> BANGKINGAN - SUMURWELUT<br />\
+    <img src="styles/legend/JALAN_2_17.png" /> BANJARSUGIHAN - MANUKAN KULON<br />\
+    <img src="styles/legend/JALAN_2_18.png" /> BANJARSUGIHAN - MANUKAN WETAN<br />\
+    <img src="styles/legend/JALAN_2_19.png" /> BANYUURIP - PUTATJAYA<br />\
+    <img src="styles/legend/JALAN_2_20.png" /> BARATAJAYA - PUCANGSEWU<br />\
+    <img src="styles/legend/JALAN_2_21.png" /> BEBEKAN - SEPANJANG<br />\
+    <img src="styles/legend/JALAN_2_22.png" /> BENDULMERISI - MARGOREJO<br />\
+    <img src="styles/legend/JALAN_2_23.png" /> BENDULMERISI - SIDOSERMO<br />\
+    <img src="styles/legend/JALAN_2_24.png" /> BENOWO - ASEMROWO<br />\
+    <img src="styles/legend/JALAN_2_25.png" /> BENOWO - LAKARSANTRI<br />\
+    <img src="styles/legend/JALAN_2_26.png" /> BENOWO - PAKAL<br />\
+    <img src="styles/legend/JALAN_2_27.png" /> BERBEK - WADUNGASRI<br />\
+    <img src="styles/legend/JALAN_2_28.png" /> BIBIS - BALONGSARI<br />\
+    <img src="styles/legend/JALAN_2_29.png" /> BIBIS - GADEL<br />\
+    <img src="styles/legend/JALAN_2_30.png" /> BRINGIN - MADE<br />\
+    <img src="styles/legend/JALAN_2_31.png" /> BRINGIN - SAMBIKEREP<br />\
+    <img src="styles/legend/JALAN_2_32.png" /> BUBUTAN - ALUN-ALUNCONTONG<br />\
+    <img src="styles/legend/JALAN_2_33.png" /> BUBUTAN - GENTENGAN<br />\
+    <img src="styles/legend/JALAN_2_34.png" /> BUBUTAN - SAWAHAN<br />\
+    <img src="styles/legend/JALAN_2_35.png" /> BULAK - KENJERAN<br />\
+    <img src="styles/legend/JALAN_2_36.png" /> BULAKBANTENG - SIDOTOPO<br />\
+    <img src="styles/legend/JALAN_2_37.png" /> BULAKBANTENG - TAMBAKWEDI<br />\
+    <img src="styles/legend/JALAN_2_38.png" /> BULAKBANTENG - TANAHKALIKEDINDING<br />\
+    <img src="styles/legend/JALAN_2_39.png" /> BUNATARAN - MANUKAN KULON<br />\
+    <img src="styles/legend/JALAN_2_40.png" /> BUNGURASIH - KEDUNGREJO<br />\
+    <img src="styles/legend/JALAN_2_41.png" /> BUNTARAN - BALONGSARI<br />\
+    <img src="styles/legend/JALAN_2_42.png" /> BUNTARAN - BANJARSUGIHAN<br />\
+    <img src="styles/legend/JALAN_2_43.png" /> BUNTARAN - BIBIS<br />\
+    <img src="styles/legend/JALAN_2_44.png" /> BUNTARAN - MANUKAN WETAN<br />\
+    <img src="styles/legend/JALAN_2_45.png" /> DARMO - JAGIR<br />\
+    <img src="styles/legend/JALAN_2_46.png" /> DARMO - NGAGEL<br />\
+    <img src="styles/legend/JALAN_2_47.png" /> DR.SUTOMO - KEPUTRAN<br />\
+    <img src="styles/legend/JALAN_2_48.png" /> DUKUHKUPANG - DUKUHPAKIS<br />\
+    <img src="styles/legend/JALAN_2_49.png" /> DUKUHPAKIS - GUNUNGSARI<br />\
+    <img src="styles/legend/JALAN_2_50.png" /> DUKUHPAKIS - JAMBANGAN<br />\
+    <img src="styles/legend/JALAN_2_51.png" /> DUKUHPAKIS - WIYUNG<br />\
+    <img src="styles/legend/JALAN_2_52.png" /> DUKUHPAKIS - WONOKROMO<br />\
+    <img src="styles/legend/JALAN_2_53.png" /> DUKUHSUTOREJO - MULYOREJO<br />\
+    <img src="styles/legend/JALAN_2_54.png" /> GADEL - TANDES KIDUL<br />\
+    <img src="styles/legend/JALAN_2_55.png" /> GADEL - TUBANAN<br />\
+    <img src="styles/legend/JALAN_2_56.png" /> GADING - KENJERAN<br />\
+    <img src="styles/legend/JALAN_2_57.png" /> GADING - PLOSO<br />\
+    <img src="styles/legend/JALAN_2_58.png" /> GADUNG - MULUNG<br />\
+    <img src="styles/legend/JALAN_2_59.png" /> GAYUNGAN - DUKUHMENANGGAL<br />\
+    <img src="styles/legend/JALAN_2_60.png" /> GAYUNGAN - MENANGGAL<br />\
+    <img src="styles/legend/JALAN_2_61.png" /> GAYUNGAN - WONOCOLO<br />\
+    <img src="styles/legend/JALAN_2_62.png" /> GEBANGPUTIH - KEPUTIH<br />\
+    <img src="styles/legend/JALAN_2_63.png" /> GEDANGASIN - TANDES KIDUL<br />\
+    <img src="styles/legend/JALAN_2_64.png" /> GEDANGASIN - TANDES LOR<br />\
+    <img src="styles/legend/JALAN_2_65.png" /> GENTENG - EMBONGKALIASIN<br />\
+    <img src="styles/legend/JALAN_2_66.png" /> GENTENG - GUBENG<br />\
+    <img src="styles/legend/JALAN_2_67.png" /> GENTENG - KETABANG<br />\
+    <img src="styles/legend/JALAN_2_68.png" /> GENTENG - TAMBAKSARI<br />\
+    <img src="styles/legend/JALAN_2_69.png" /> GENTENG - TEGALSARI<br />\
+    <img src="styles/legend/JALAN_2_70.png" /> GREGES - ASEMROWO<br />\
+    <img src="styles/legend/JALAN_2_71.png" /> GREGES - KALIANAK<br />\
+    <img src="styles/legend/JALAN_2_72.png" /> GRESIK - KOTA SURABAYA<br />\
+    <img src="styles/legend/JALAN_2_73.png" /> GUBENG - KERTAJAYA<br />\
+    <img src="styles/legend/JALAN_2_74.png" /> GUBENG - MULYOREJO<br />\
+    <img src="styles/legend/JALAN_2_75.png" /> GUBENG - SUKOLILO<br />\
+    <img src="styles/legend/JALAN_2_76.png" /> GUBENG - TENGGILISMEJOYO<br />\
+    <img src="styles/legend/JALAN_2_77.png" /> GUBENG - WONOCOLO<br />\
+    <img src="styles/legend/JALAN_2_78.png" /> GUBENG - WONOKROMO<br />\
+    <img src="styles/legend/JALAN_2_79.png" /> GUNDIH - BUBUTAN<br />\
+    <img src="styles/legend/JALAN_2_80.png" /> GUNDIH - TEMBOKDUKUH<br />\
+    <img src="styles/legend/JALAN_2_81.png" /> GUNUNGANYAR - GUNUNGANYAR TAMBAK<br />\
+    <img src="styles/legend/JALAN_2_82.png" /> JAMBANGAN - GAYUNGAN<br />\
+    <img src="styles/legend/JALAN_2_83.png" /> JAMBANGAN - KEBONSARI<br />\
+    <img src="styles/legend/JALAN_2_84.png" /> JANTI - WEDORO<br />\
+    <img src="styles/legend/JALAN_2_85.png" /> JEMURWONOSARI - SIDOSERMO<br />\
+    <img src="styles/legend/JALAN_2_86.png" /> JEMURWONOSARI - SIWALANKERTO<br />\
+    <img src="styles/legend/JALAN_2_87.png" /> JEPARA - BUBUTAN<br />\
+    <img src="styles/legend/JALAN_2_88.png" /> JEPARA - GUNDIH<br />\
+    <img src="styles/legend/JALAN_2_89.png" /> JERUK - LIDAHKULON<br />\
+    <img src="styles/legend/JALAN_2_90.png" /> KALIANAK - ASEMROWO<br />\
+    <img src="styles/legend/JALAN_2_91.png" /> KALIANAK - GENTING<br />\
+    <img src="styles/legend/JALAN_2_92.png" /> KALIJUDAN - DUKUHSUTOREJO<br />\
+    <img src="styles/legend/JALAN_2_93.png" /> KALIJUDAN - MULYOREJO<br />\
+    <img src="styles/legend/JALAN_2_94.png" /> KALIRUNGKUT - KEDUNGBARUK<br />\
+    <img src="styles/legend/JALAN_2_95.png" /> KALIRUNGKUT - PENJARINGANSARI<br />\
+    <img src="styles/legend/JALAN_2_96.png" /> KALIRUNGKUT - RUNGKUT KIDUL<br />\
+    <img src="styles/legend/JALAN_2_97.png" /> KALISARI - DUKUHSUTOREJO<br />\
+    <img src="styles/legend/JALAN_2_98.png" /> KALISARI - MULYOREJO<br />\
+    <img src="styles/legend/JALAN_2_99.png" /> KANDANGAN - KLAKAHREJO<br />\
+    <img src="styles/legend/JALAN_2_100.png" /> KAPASAN - TAMBAKREJO<br />\
+    <img src="styles/legend/JALAN_2_101.png" /> KAPASARI - KETABANG<br />\
+    <img src="styles/legend/JALAN_2_102.png" /> KARAH - JAMBANGAN<br />\
+    <img src="styles/legend/JALAN_2_103.png" /> KARANGPILANG - JAMBANGAN<br />\
+    <img src="styles/legend/JALAN_2_104.png" /> KARANGPILANG - KEBRAON<br />\
+    <img src="styles/legend/JALAN_2_105.png" /> KARANGPOH - GADEL<br />\
+    <img src="styles/legend/JALAN_2_106.png" /> KARANGPOH - GEDANGASIN<br />\
+    <img src="styles/legend/JALAN_2_107.png" /> KARANGPOH - TANDES KIDUL<br />\
+    <img src="styles/legend/JALAN_2_108.png" /> KEBONSARI - PAGESANGAN<br />\
+    <img src="styles/legend/JALAN_2_109.png" /> KEDUNGBARUK - PENJARINGANSARI<br />\
+    <img src="styles/legend/JALAN_2_110.png" /> KEDUNGCOWEK - KENJERAN<br />\
+    <img src="styles/legend/JALAN_2_111.png" /> KEDUNGCOWEK - TANAHKALIKEDINDING<br />\
+    <img src="styles/legend/JALAN_2_112.png" /> KEDUNGDORO - TEGALSARI<br />\
+    <img src="styles/legend/JALAN_2_113.png" /> KEDUNGDORO - WONOREJO<br />\
+    <img src="styles/legend/JALAN_2_114.png" /> KEDURUS - KEBRAON<br />\
+    <img src="styles/legend/JALAN_2_115.png" /> KEJAWANPUTIHTAMBAK - KALISARI<br />\
+    <img src="styles/legend/JALAN_2_116.png" /> KEMAYORAN - KREMBANGAN SELATAN<br />\
+    <img src="styles/legend/JALAN_2_117.png" /> KENDANGSARI - KUTISARI<br />\
+    <img src="styles/legend/JALAN_2_118.png" /> KENJERAN - KOMPLEKKENJERAN<br />\
+    <img src="styles/legend/JALAN_2_119.png" /> KENJERAN - MULYOREJO<br />\
+    <img src="styles/legend/JALAN_2_120.png" /> KENJERAN - SIMOKERTO<br />\
+    <img src="styles/legend/JALAN_2_121.png" /> KENJERAN - SUKOLILO<br />\
+    <img src="styles/legend/JALAN_2_122.png" /> KENJERAN - TAMBAKSARI<br />\
+    <img src="styles/legend/JALAN_2_123.png" /> KERTAJAYA - BARATAJAYA<br />\
+    <img src="styles/legend/JALAN_2_124.png" /> KERTAJAYA - PUCANGSEWU<br />\
+    <img src="styles/legend/JALAN_2_125.png" /> KETABAN - EMBONGKALIASIN<br />\
+    <img src="styles/legend/JALAN_2_126.png" /> KETINTANG - GAYUNGAN<br />\
+    <img src="styles/legend/JALAN_2_127.png" /> KLAMPISNGASEM - GEBANGPUTIH<br />\
+    <img src="styles/legend/JALAN_2_128.png" /> KLAMPISNGASEM - KEPUTIH<br />\
+    <img src="styles/legend/JALAN_2_129.png" /> KLAMPISNGASEM - SEMOLOWARU<br />\
+    <img src="styles/legend/JALAN_2_130.png" /> KOMPLEKKENJERAN - SUKOLILO<br />\
+    <img src="styles/legend/JALAN_2_131.png" /> KOTA SURABAYA - SIDOARJO<br />\
+    <img src="styles/legend/JALAN_2_132.png" /> KREMBANGAN - BUBUTAN<br />\
+    <img src="styles/legend/JALAN_2_133.png" /> KREMBANGAN - PABEANCANTIKAN<br />\
+    <img src="styles/legend/JALAN_2_134.png" /> KREMBANGAN - TAWANGSARI<br />\
+    <img src="styles/legend/JALAN_2_135.png" /> KREMBANGAN UTARA - NYAMPLUNGAN<br />\
+    <img src="styles/legend/JALAN_2_136.png" /> KUPANGKRAJAN - BANYUURIP<br />\
+    <img src="styles/legend/JALAN_2_137.png" /> LAKARSANTRI - JERUK<br />\
+    <img src="styles/legend/JALAN_2_138.png" /> LAKARSANTRI - KARANGPILANG<br />\
+    <img src="styles/legend/JALAN_2_139.png" /> LAKARSANTRI - SUKOMANUNGGAL<br />\
+    <img src="styles/legend/JALAN_2_140.png" /> LAKARSANTRI - WIYUNG<br />\
+    <img src="styles/legend/JALAN_2_141.png" /> LIDAH KULON - BANGKINGAN<br />\
+    <img src="styles/legend/JALAN_2_142.png" /> LIDAH KULON - LIDAH WETAN<br />\
+    <img src="styles/legend/JALAN_2_143.png" /> LIDAHWETAN - BANGKINGAN<br />\
+    <img src="styles/legend/JALAN_2_144.png" /> LIDAHWETAN - SUMURWELUT<br />\
+    <img src="styles/legend/JALAN_2_145.png" /> LONTAR - LIDAH KULON<br />\
+    <img src="styles/legend/JALAN_2_146.png" /> LONTAR - LIDAH WETAN<br />\
+    <img src="styles/legend/JALAN_2_147.png" /> MADE - JERUK<br />\
+    <img src="styles/legend/JALAN_2_148.png" /> MADE - LAKARSANTRI<br />\
+    <img src="styles/legend/JALAN_2_149.png" /> MADE - SAMBIKEREP<br />\
+    <img src="styles/legend/JALAN_2_150.png" /> MANUKAN KULON - MANUKAN WETAN<br />\
+    <img src="styles/legend/JALAN_2_151.png" /> MANUKAN WETAN - BIBIS<br />\
+    <img src="styles/legend/JALAN_2_152.png" /> MARGOREJO - JEMURWONOSARI<br />\
+    <img src="styles/legend/JALAN_2_153.png" /> MARGOREJO - SIDOSERMO<br />\
+    <img src="styles/legend/JALAN_2_154.png" /> MEDOKAN SEMAMPIR - KEPUTIH<br />\
+    <img src="styles/legend/JALAN_2_155.png" /> MENANGGAL - DUKUHMENANGGAL<br />\
+    <img src="styles/legend/JALAN_2_156.png" /> MENURPUMPUNGAN - KLAMPISNGASEM<br />\
+    <img src="styles/legend/JALAN_2_157.png" /> MENURPUMPUNGAN - NYINDENJANGKUNGAN<br />\
+    <img src="styles/legend/JALAN_2_158.png" /> MENURPUMPUNGAN - SEMOLOWARU<br />\
+    <img src="styles/legend/JALAN_2_159.png" /> MOROKREMBANGAN - DUPAK<br />\
+    <img src="styles/legend/JALAN_2_160.png" /> MOROKREMBANGAN - KEMAYORAN<br />\
+    <img src="styles/legend/JALAN_2_161.png" /> MOROKREMBANGAN - PERAK BARAT<br />\
+    <img src="styles/legend/JALAN_2_162.png" /> MULYOREJO - MAYARSABRANGAN<br />\
+    <img src="styles/legend/JALAN_2_163.png" /> MULYOREJO - SUKOLILO<br />\
+    <img src="styles/legend/JALAN_2_164.png" /> NGAGEL - JAGIR<br />\
+    <img src="styles/legend/JALAN_2_165.png" /> NGAGEL - NGAGELREJO<br />\
+    <img src="styles/legend/JALAN_2_166.png" /> NGAGELREJO - JAGIR<br />\
+    <img src="styles/legend/JALAN_2_167.png" /> NGELOM - WONOCOLO<br />\
+    <img src="styles/legend/JALAN_2_168.png" /> NYAMPLUNGAN - BONGKARAN<br />\
+    <img src="styles/legend/JALAN_2_169.png" /> NYINDENJANGKUNGAN - MEDOKAN SEMAMPIR<br />\
+    <img src="styles/legend/JALAN_2_170.png" /> PABEANCANTIKAN - BUBUTAN<br />\
+    <img src="styles/legend/JALAN_2_171.png" /> PABEANCANTIKAN - GENTENG<br />\
+    <img src="styles/legend/JALAN_2_172.png" /> PABEANCANTIKAN - SEMAMPIR<br />\
+    <img src="styles/legend/JALAN_2_173.png" /> PABEANCANTIKAN - SIMOKERTO<br />\
+    <img src="styles/legend/JALAN_2_174.png" /> PACARKELING - PACARKEMBANG<br />\
+    <img src="styles/legend/JALAN_2_175.png" /> PAKAL - BABAT JERAWAT<br />\
+    <img src="styles/legend/JALAN_2_176.png" /> PAKAL - ROMOKALISARI<br />\
+    <img src="styles/legend/JALAN_2_177.png" /> PANJANGJIWO - PRAPEN<br />\
+    <img src="styles/legend/JALAN_2_178.png" /> PANJANGJIWO - TENGGILISMEJOYO<br />\
+    <img src="styles/legend/JALAN_2_179.png" /> PEGIRIAN - SIDOTOPO<br />\
+    <img src="styles/legend/JALAN_2_180.png" /> PENELEH - KAPASARI<br />\
+    <img src="styles/legend/JALAN_2_181.png" /> PENELEH - KETABANG<br />\
+    <img src="styles/legend/JALAN_2_182.png" /> PENGALANGAN - SETRO<br />\
+    <img src="styles/legend/JALAN_2_183.png" /> PENJARINGANSARI - MEDOKANAYU<br />\
+    <img src="styles/legend/JALAN_2_184.png" /> PENJARINGANSARI - RUNGKUTKIDUL<br />\
+    <img src="styles/legend/JALAN_2_185.png" /> PERAK - KEMAYORAN<br />\
+    <img src="styles/legend/JALAN_2_186.png" /> PERAK UTARA - PERAK TIMUR<br />\
+    <img src="styles/legend/JALAN_2_187.png" /> PERAKTIMUR - KREMBANGAN UTARA<br />\
+    <img src="styles/legend/JALAN_2_188.png" /> PETEMON - KUPANGKRAJAN<br />\
+    <img src="styles/legend/JALAN_2_189.png" /> PETEMON - SAWAHAN<br />\
+    <img src="styles/legend/JALAN_2_190.png" /> PLOSO - PACARKEMBANG<br />\
+    <img src="styles/legend/JALAN_2_191.png" /> PRADAHKALIKENDAL - DUKUHPAKIS<br />\
+    <img src="styles/legend/JALAN_2_192.png" /> PUTATJAYA - PAKIS<br />\
+    <img src="styles/legend/JALAN_2_193.png" /> RANDEGANSARI - GADUNG<br />\
+    <img src="styles/legend/JALAN_2_194.png" /> RANGKAH - GADING<br />\
+    <img src="styles/legend/JALAN_2_195.png" /> RANGKAH - PLOSO<br />\
+    <img src="styles/legend/JALAN_2_196.png" /> ROMOKALISARI - BABATJERAWAT<br />\
+    <img src="styles/legend/JALAN_2_197.png" /> ROMOKALISARI - TAMBAKOSOWILANGON<br />\
+    <img src="styles/legend/JALAN_2_198.png" /> RUNGKUT - GUNUNGANYAR<br />\
+    <img src="styles/legend/JALAN_2_199.png" /> RUNGKUT TENGAH - GUNUNGANYAR<br />\
+    <img src="styles/legend/JALAN_2_200.png" /> RUNGKUT TENGAH - RUNGKUTMENANGGAL<br />\
+    <img src="styles/legend/JALAN_2_201.png" /> RUNGKUTMENANGGAL - GUNUNGANYAR<br />\
+    <img src="styles/legend/JALAN_2_202.png" /> SAMBIKEREP - JERUK<br />\
+    <img src="styles/legend/JALAN_2_203.png" /> SAMBIKEREP - LIDAH KULON<br />\
+    <img src="styles/legend/JALAN_2_204.png" /> SAMBIKEREP - LONTAR<br />\
+    <img src="styles/legend/JALAN_2_205.png" /> SAWAHAN - DUKUHPAKIS<br />\
+    <img src="styles/legend/JALAN_2_206.png" /> SAWAHAN - GENTENG<br />\
+    <img src="styles/legend/JALAN_2_207.png" /> SAWAHAN - KUPANGKRAJAN<br />\
+    <img src="styles/legend/JALAN_2_208.png" /> SAWAHAN - TEGALSARI<br />\
+    <img src="styles/legend/JALAN_2_209.png" /> SAWAHAN - WONOKROMO<br />\
+    <img src="styles/legend/JALAN_2_210.png" /> SAWUNGGALING - DARMO<br />\
+    <img src="styles/legend/JALAN_2_211.png" /> SAWUNGGALING - WONOKROMO<br />\
+    <img src="styles/legend/JALAN_2_212.png" /> SEMAMPIR - KENJERAN<br />\
+    <img src="styles/legend/JALAN_2_213.png" /> SEMAMPIR - SIMOKERTO<br />\
+    <img src="styles/legend/JALAN_2_214.png" /> SEMEMI - KANDANGAN<br />\
+    <img src="styles/legend/JALAN_2_215.png" /> SEMEMI - KLAKAHREJO<br />\
+    <img src="styles/legend/JALAN_2_216.png" /> SEMEMI - TAMBAKOSOWILANGON<br />\
+    <img src="styles/legend/JALAN_2_217.png" /> SEMOLOWARU - KEPUTIH<br />\
+    <img src="styles/legend/JALAN_2_218.png" /> SEMOLOWARU - MEDOKAN SEMAMPIR<br />\
+    <img src="styles/legend/JALAN_2_219.png" /> SEMOLOWARU - NYINDENJANGKUNGAN<br />\
+    <img src="styles/legend/JALAN_2_220.png" /> SIDODADI - KAPASAN<br />\
+    <img src="styles/legend/JALAN_2_221.png" /> SIDODADI - SIMOKERTO<br />\
+    <img src="styles/legend/JALAN_2_222.png" /> SIDOTOPO WETAN - TANAHKALIKEDINDING<br />\
+    <img src="styles/legend/JALAN_2_223.png" /> SIMOKERTO - GENTENG<br />\
+    <img src="styles/legend/JALAN_2_224.png" /> SIMOKERTO - KAPASAN<br />\
+    <img src="styles/legend/JALAN_2_225.png" /> SIMOKERTO - TAMBAKREJO<br />\
+    <img src="styles/legend/JALAN_2_226.png" /> SIMOKERTO - TAMBAKSARI<br />\
+    <img src="styles/legend/JALAN_2_227.png" /> SIMOLAWANG - SIDODADI<br />\
+    <img src="styles/legend/JALAN_2_228.png" /> SIMOLAWANG - SIMOKERTO<br />\
+    <img src="styles/legend/JALAN_2_229.png" /> SIMOMULYO - SONOKWIJENAN<br />\
+    <img src="styles/legend/JALAN_2_230.png" /> SONOKWIJENAN - PUTATGEDE<br />\
+    <img src="styles/legend/JALAN_2_231.png" /> SUKOLILO - RUNGKUT<br />\
+    <img src="styles/legend/JALAN_2_232.png" /> SUKOLILO - TENGGILISMEJOYO<br />\
+    <img src="styles/legend/JALAN_2_233.png" /> SUKOMANUNGGAL - DUKUHPAKIS<br />\
+    <img src="styles/legend/JALAN_2_234.png" /> SUKOMANUNGGAL - SAWAHAN<br />\
+    <img src="styles/legend/JALAN_2_235.png" /> SUKOMANUNGGAL - SIMOMULYO<br />\
+    <img src="styles/legend/JALAN_2_236.png" /> SUKOMANUNGGAL - SONOKWIJENAN<br />\
+    <img src="styles/legend/JALAN_2_237.png" /> SUKOMANUNGGAL - WIYUNG<br />\
+    <img src="styles/legend/JALAN_2_238.png" /> SUKOREJO - SEGOROMADU<br />\
+    <img src="styles/legend/JALAN_2_239.png" /> SUMBEREJO - BENOWO<br />\
+    <img src="styles/legend/JALAN_2_240.png" /> SUMBEREJO - PAKAL<br />\
+    <img src="styles/legend/JALAN_2_241.png" /> SUMBEREJO - ROMOKALISARI<br />\
+    <img src="styles/legend/JALAN_2_242.png" /> TAMBAKBERAS - JONO<br />\
+    <img src="styles/legend/JALAN_2_243.png" /> TAMBAKDONO - SUMBEREJO<br />\
+    <img src="styles/legend/JALAN_2_244.png" /> TAMBAKLANGON - GREGES<br />\
+    <img src="styles/legend/JALAN_2_245.png" /> TAMBAKOSOWILANGON - KANDANGAN<br />\
+    <img src="styles/legend/JALAN_2_246.png" /> TAMBAKREJO - TAMBAKOSO<br />\
+    <img src="styles/legend/JALAN_2_247.png" /> TAMBAKSARI - GENTENG<br />\
+    <img src="styles/legend/JALAN_2_248.png" /> TAMBAKSARI - GUBENG<br />\
+    <img src="styles/legend/JALAN_2_249.png" /> TAMBAKSARI - MULYOREJO<br />\
+    <img src="styles/legend/JALAN_2_250.png" /> TAMBAKSARI - PACARKELING<br />\
+    <img src="styles/legend/JALAN_2_251.png" /> TAMBAKSARI - PLOSO<br />\
+    <img src="styles/legend/JALAN_2_252.png" /> TAMBAKWEDI - KEDUNGCOWEK<br />\
+    <img src="styles/legend/JALAN_2_253.png" /> TAMBAKWEDI - TANAHKALIKEDINDING<br />\
+    <img src="styles/legend/JALAN_2_254.png" /> TANAHKALIKEDINDING - BULAK<br />\
+    <img src="styles/legend/JALAN_2_255.png" /> TANDES - LAKARSANTRI<br />\
+    <img src="styles/legend/JALAN_2_256.png" /> TANDES - SUKOMANUNGGAL<br />\
+    <img src="styles/legend/JALAN_2_257.png" /> TANDES KIDUL - TANDES LOR<br />\
+    <img src="styles/legend/JALAN_2_258.png" /> TANDES LOR - TUBANAN<br />\
+    <img src="styles/legend/JALAN_2_259.png" /> TANDESKIDUL - TUBANAN<br />\
+    <img src="styles/legend/JALAN_2_260.png" /> TANJUNGSARI - SONOKWIJENAN<br />\
+    <img src="styles/legend/JALAN_2_261.png" /> TANJUNGSARI - SUKOMANUNGGAL<br />\
+    <img src="styles/legend/JALAN_2_262.png" /> TAWANGSARI - NGELOM<br />\
+    <img src="styles/legend/JALAN_2_263.png" /> TEGALSARI - DR.SUTOMO<br />\
+    <img src="styles/legend/JALAN_2_264.png" /> TEGALSARI - GUBENG<br />\
+    <img src="styles/legend/JALAN_2_265.png" /> TEGALSARI - KEPUTRAN<br />\
+    <img src="styles/legend/JALAN_2_266.png" /> TEGALSARI - WONOKROMO<br />\
+    <img src="styles/legend/JALAN_2_267.png" /> TEMBOKDUKUH - BUBUTAN<br />\
+    <img src="styles/legend/JALAN_2_268.png" /> TENGGILISMEJOYO - GUNUNGANYAR<br />\
+    <img src="styles/legend/JALAN_2_269.png" /> TENGGILISMEJOYO - KENDANGSARI<br />\
+    <img src="styles/legend/JALAN_2_270.png" /> TENGGILISMEJOYO - PRAPEN<br />\
+    <img src="styles/legend/JALAN_2_271.png" /> TENGGILISMEJOYO - RUNGKUT<br />\
+    <img src="styles/legend/JALAN_2_272.png" /> UJUNG - AMPEL<br />\
+    <img src="styles/legend/JALAN_2_273.png" /> UJUNG - PEGIRIAN<br />\
+    <img src="styles/legend/JALAN_2_274.png" /> UJUNG - WONOKUSUMO<br />\
+    <img src="styles/legend/JALAN_2_275.png" /> WADUNGASRI - TAMBAKSUMUR<br />\
+    <img src="styles/legend/JALAN_2_276.png" /> WARUNGGUNUNG - KARANGPILANG<br />\
+    <img src="styles/legend/JALAN_2_277.png" /> WIYUNG - BALASKLUMPRIK<br />\
+    <img src="styles/legend/JALAN_2_278.png" /> WIYUNG - JAJARTUNGGAL<br />\
+    <img src="styles/legend/JALAN_2_279.png" /> WIYUNG - JAMBANGAN<br />\
+    <img src="styles/legend/JALAN_2_280.png" /> WIYUNG - KARANGPILANG<br />\
+    <img src="styles/legend/JALAN_2_281.png" /> WONKROMO - GAYUNGAN<br />\
+    <img src="styles/legend/JALAN_2_282.png" /> WONOCOLO - BEBEKAN<br />\
+    <img src="styles/legend/JALAN_2_283.png" /> WONOCOLO - TENGGILISMEJOYO<br />\
+    <img src="styles/legend/JALAN_2_284.png" /> WONOKROMO - GAYUNGAN<br />\
+    <img src="styles/legend/JALAN_2_285.png" /> WONOKROMO - GUBENG<br />\
+    <img src="styles/legend/JALAN_2_286.png" /> WONOKROMO - JAGIR<br />\
+    <img src="styles/legend/JALAN_2_287.png" /> WONOKROMO - WONOCOLO<br />\
+    <img src="styles/legend/JALAN_2_288.png" /> WONOKUSUMO - PEGIRIAN<br />\
+    <img src="styles/legend/JALAN_2_289.png" /> WONOREJO - DR.SUTOMO<br />\
+    <img src="styles/legend/JALAN_2_290.png" /> WONOREJO - MEDOKANAYU<br />\
+    <img src="styles/legend/JALAN_2_291.png" /> WONOREJO - PENJARINGANSARI<br />\
+    <img src="styles/legend/JALAN_2_292.png" /> WONOREJO - TEGALSARI<br />\
+    <img src="styles/legend/JALAN_2_293.png" /> <br />'
+        });
+var format_RUMAHSAKIT_3 = new ol.format.GeoJSON();
+var features_RUMAHSAKIT_3 = format_RUMAHSAKIT_3.readFeatures(json_RUMAHSAKIT_3, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_RUMAHSAKIT_3 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_RUMAHSAKIT_3.addFeatures(features_RUMAHSAKIT_3);
+var lyr_RUMAHSAKIT_3 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_RUMAHSAKIT_3, 
+                style: style_RUMAHSAKIT_3,
+                popuplayertitle: "RUMAHSAKIT",
+                interactive: true,
+    title: 'RUMAHSAKIT<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_0.png" /> RS Adi Husada Kapasan<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_1.png" /> RS Adi Husada Wetan<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_2.png" /> RS AL Dr. Ramelan<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_3.png" /> RS AL Irsyad<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_4.png" /> RS Bhayangkara HS Samsoeri Mertojoso<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_5.png" /> RS Darmo<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_6.png" /> RS Ibu dan Anak IBI Surabaya<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_7.png" /> RS Islam Darus Syifa<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_8.png" /> RS Katolik St Vincentius A Paulo (RKZ)<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_9.png" /> RS Mata Masyarakat Jawa Timur<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_10.png" /> RS Mata Undaan<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_11.png" /> RS Mayapada<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_12.png" /> RS PHC Surabaya<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_13.png" /> RS Royal Surabaya<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_14.png" /> RS Surabaya Medical Center<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_15.png" /> RS TNI Al Dr.Doepomo<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_16.png" /> RS Wijaya<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_17.png" /> RS William Booth Surabaya<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_18.png" /> RSAU Soemitro<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_19.png" /> RSI Surabaya<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_20.png" /> RSIA Graha Medika<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_21.png" /> RSIA Kendangsari<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_22.png" /> RSUD Dr. M. Soewandhie<br />\
+    <img src="styles/legend/RUMAHSAKIT_3_23.png" /> <br />'
+        });
+
+lyr_OpenStreetMap_0.setVisible(true);lyr_ADMINISTRASI_1.setVisible(true);lyr_JALAN_2.setVisible(true);lyr_RUMAHSAKIT_3.setVisible(true);
+var layersList = [lyr_OpenStreetMap_0,lyr_ADMINISTRASI_1,lyr_JALAN_2,lyr_RUMAHSAKIT_3];
+lyr_ADMINISTRASI_1.set('fieldAliases', {'KELURAHAN': 'KELURAHAN', 'REMARK': 'REMARK', 'KECAMATAN': 'KECAMATAN', 'PROVINSI': 'PROVINSI', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', });
+lyr_JALAN_2.set('fieldAliases', {'REMARK': 'REMARK', 'JALAN': 'JALAN', 'SHAPE_Leng': 'SHAPE_Leng', });
+lyr_RUMAHSAKIT_3.set('fieldAliases', {'id': 'id', 'NamaRS': 'NamaRS', 'JmlDokter': 'JmlDokter', 'JenisRS': 'JenisRS', 'KelasRS': 'KelasRS', 'Akreditasi': 'Akreditasi', });
+lyr_ADMINISTRASI_1.set('fieldImages', {'KELURAHAN': 'TextEdit', 'REMARK': 'TextEdit', 'KECAMATAN': 'TextEdit', 'PROVINSI': 'TextEdit', 'SHAPE_Leng': 'TextEdit', 'SHAPE_Area': 'TextEdit', });
+lyr_JALAN_2.set('fieldImages', {'REMARK': 'TextEdit', 'JALAN': 'TextEdit', 'SHAPE_Leng': 'TextEdit', });
+lyr_RUMAHSAKIT_3.set('fieldImages', {'id': 'TextEdit', 'NamaRS': 'TextEdit', 'JmlDokter': '', 'JenisRS': '', 'KelasRS': '', 'Akreditasi': '', });
+lyr_ADMINISTRASI_1.set('fieldLabels', {'KELURAHAN': 'inline label - always visible', 'REMARK': 'hidden field', 'KECAMATAN': 'inline label - always visible', 'PROVINSI': 'inline label - always visible', 'SHAPE_Leng': 'hidden field', 'SHAPE_Area': 'hidden field', });
+lyr_JALAN_2.set('fieldLabels', {'REMARK': 'hidden field', 'JALAN': 'inline label - always visible', 'SHAPE_Leng': 'hidden field', });
+lyr_RUMAHSAKIT_3.set('fieldLabels', {'id': 'hidden field', 'NamaRS': 'inline label - always visible', 'JmlDokter': 'inline label - always visible', 'JenisRS': 'inline label - always visible', 'KelasRS': 'inline label - always visible', 'Akreditasi': 'inline label - always visible', });
+lyr_RUMAHSAKIT_3.on('precompose', function(evt) {
+    evt.context.globalCompositeOperation = 'normal';
+});
